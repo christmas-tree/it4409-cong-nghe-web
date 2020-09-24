@@ -1,11 +1,13 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    background-color: lightgray;
 }
 
 .container {
     margin: auto;
     width: 1000px;
+    background-color: white;
 }
 
 table, td {
@@ -39,6 +41,11 @@ td.profile {
     padding: 5px;
     color: crimson;
 }
+
+td.value {
+    padding: 10px;
+}
+
 .row {
     width: 100%;
     display: flex;
@@ -68,4 +75,11 @@ td.profile {
 
 p span i {
     padding: 10px;
+}
+
+ul {
+    list-style-position: outside;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
