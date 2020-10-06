@@ -1,3 +1,4 @@
+// validation
 $(document).ready(function () {
     $('.form').validate({
         rules: {
