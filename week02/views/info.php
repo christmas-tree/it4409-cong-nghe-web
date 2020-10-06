@@ -22,7 +22,7 @@
                   <div class="e-profile">
                     <div class="row">
                       <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
-                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                        <div class="text-center text-sm-left mb-2 mb-sm-0 alert alert-info">
                           <h2 class="pt-sm-2 pb-1 mb-0 text-nowrap">Hey!</h2>
                           <p class="mb-0">Thanks for submitting your information. Here's a recap:</p>
                         </div>
