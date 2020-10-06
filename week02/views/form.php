@@ -7,12 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    body {
-      margin-top: 20px;
-      background: #f8f8f8
-    }
-  </style>
+  <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
@@ -40,13 +35,13 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label for="name">Full Name*</label>
+                              <label for="name">Full Name<span>*</span></label>
                               <input class="form-control" type="text" id="name" name="name" placeholder="Your name" required>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
-                              <label for="username">Username*</label>
+                              <label for="username">Username<span>*</span></label>
                               <input class="form-control" type="text" id="username" name="username" placeholder="your.username" required>
                             </div>
                           </div>
@@ -54,7 +49,7 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label for="email">Email*</label>
+                              <label for="email">Email<span>*</span></label>
                               <input class="form-control" type="text" id="email" name="email" placeholder="user@example.com" required>
                             </div>
                           </div>
@@ -62,15 +57,15 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label for="class">Class*</label>
+                              <label for="class">Class<span>*</span></label>
                               <input class="form-control" type="text" id="class" name="class" placeholder="Class" required>
                             </div>
                           </div>
                           <div class="col">
                             <div class="form-group">
-                              <label for="university">University*</label>
+                              <label for="university">University<span>*</span></label>
                               <select class="form-control" id="university" name="university" required>
-                                <option selected>Choose...</option>
+                                <option selected value="">Choose...</option>
                                 <option value="1">Hanoi Royal University of Science and Technology</option>
                                 <option value="2">Vietnam National University, Hanoi</option>
                                 <option value="3">National Economics University</option>
@@ -93,7 +88,7 @@
                         <div class="row">
                           <div class="col">
                             <div class="form-group">
-                              <label for="address">Address*</label>
+                              <label for="address">Address<span>*</span></label>
                               <textarea class="form-control" id="address" name="address" rows="3" placeholder="Address" required></textarea>
                             </div>
                           </div>
@@ -102,7 +97,7 @@
                       <div class="col-12 col-sm-5 mb-3">
                         <div class="row">
                           <div class="col checkbox-group required">
-                            <label>Hobbies*</label>
+                            <label>Hobbies</label>
                             <div class="row">
                               <div class="col-12 col-sm-6">
                                 <div class="custom-controls-stacked px-2">
@@ -155,25 +150,8 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script>
-      (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-          var form = document.getElementsByClassName('form')[0];
-          var warningText = $('#warning');
-
-          form.addEventListener('submit', function(event) {
-            var checkedHobbyBoxes = $('div.checkbox-group.required :checkbox:checked');
-            if (form.checkValidity() === false || checkedHobbyBoxes.length === 0) {
-              event.preventDefault();
-              event.stopPropagation();
-
-              warningText.text('Please complete the required fields.');
-            }
-          }, false);
-        }, false);
-      })();
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="js/form.js"></script>
 </body>
 
 </html>

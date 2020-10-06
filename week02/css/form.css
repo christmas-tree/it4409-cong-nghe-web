@@ -1,0 +1,12 @@
+body {
+  margin-top: 20px;
+  background: #bbbbbb;
+}
+
+label span {
+  color: red;
+}
+
+form .error {
+  color: red;
+}
