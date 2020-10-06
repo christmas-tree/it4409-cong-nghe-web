@@ -27,8 +27,6 @@
                       </div>
                     </div>
                   </div>
-                  <p class="text-danger" id="warning"><?= $warning_message ?></p>
-
                   <form class="form" method="POST" action="index.php" novalidate>
                     <div class="row">
                       <div class="col">
