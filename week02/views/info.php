@@ -23,8 +23,6 @@
           <div class="col mb-3">
             <div class="card">
               <div class="card-body">
-
-
                 <div class="container">
                   <div class="e-profile">
                     <div class="row">
@@ -72,6 +70,11 @@
                           </tr>
                         </tbody>
                       </table>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <a class="btn btn-secondary" href="index.php">Back</a>
+                      </div>
                     </div>
                   </div>
                 </div>
