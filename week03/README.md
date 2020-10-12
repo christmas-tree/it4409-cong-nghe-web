@@ -13,3 +13,6 @@ ex1:
 ex2:
     $ cd RadianExercise
     $ php -S localhost:8000
+ex3:
+    $ cd DateTimeFunction
+    $ php -S localhost:8000
