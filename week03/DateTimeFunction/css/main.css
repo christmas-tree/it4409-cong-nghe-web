@@ -1,0 +1,17 @@
+body {
+  margin-top: 20px;
+  background: #e6e6e6;
+  background-image: url("../src/clock.jpg");
+}
+
+label span {
+  color: red;
+}
+
+form .error {
+  color: red;
+}
+
+h5 b {
+  text-transform: uppercase;
+}
