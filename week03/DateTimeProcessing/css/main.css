@@ -11,3 +11,7 @@ label span {
 form .error {
   color: red;
 }
+
+h5 b {
+  text-transform: uppercase;
+}

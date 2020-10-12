@@ -36,7 +36,7 @@
                                                             <label>Convert from<span>*</span></label>
                                                             <div class="row">
                                                                 <div class="col">
-                                                                    <input class="form-control" type="number" name="value" placeholder="123" required>
+                                                                    <input class="form-control" type="number" name="value" placeholder="value" required>
                                                                 </div>
                                                                 <div class="col">
                                                                     <select class="form-control" name="unit">
