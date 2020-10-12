@@ -1,10 +1,12 @@
 <?php
 
+// Radian to Degree
 function convertRadToDeg($rad_val)
 {
     return $rad_val * 180 / M_PI;
 }
 
+// Degree to Radian
 function convertDegToRad($deg_val)
 {
     return $deg_val * M_PI / 180;
@@ -18,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = null;
     $to_unit = null;
 
+    // validate input & convert
     if (!empty($value) && in_array($from_unit, array('rad', 'deg'))) {
 
         if ($from_unit === 'rad') {
