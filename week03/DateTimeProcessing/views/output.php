@@ -116,11 +116,11 @@
                     <div class="col mb-3">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Hi <?php echo $name ?>!</h5>
-                                <p>You have choose to have an appointment on <?php echo "$hour:$minute:$second, $day/$month/$year" ?></p>
+                                <h5 class="card-title">Hi <b><?php echo $name ?></b>!</h5>
+                                <p>You have choose to have an appointment on <b><?php echo "$hour:$minute:$second, $day/$month/$year" ?></b></p>
                                 <h6 class="card-subtitle mb-2 text-muted">More information</h6>
-                                <p>In 12 hours, the time and date is <?php echo "$hour12:$minute:$second $AMorPM, $day/$month/$year" ?></p>
-                                <p>This month has <?php echo $numberOfDays ?> days!</p>
+                                <p>In 12 hours, the time and date is <b><?php echo "$hour12:$minute:$second $AMorPM, $day/$month/$year" ?></b></p>
+                                <p>This month has <b><?php echo $numberOfDays ?></b> days!</p>
                             </div>
                         </div>
                     </div>
