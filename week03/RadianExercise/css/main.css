@@ -1,0 +1,22 @@
+body {
+  margin-top: 20px;
+  background: #e6e6e6;
+  background-image: url("../src/math.jpg");
+  background-position: center;
+}
+
+label span {
+  color: red;
+}
+
+form .error {
+  color: red;
+}
+
+.equal {
+  text-align: center;
+}
+
+.equal label {
+  margin: auto;
+}
