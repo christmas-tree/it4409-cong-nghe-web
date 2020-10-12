@@ -7,5 +7,9 @@ Server built:   2020-08-12T19:46:17
 PHP 7.4.3 (cli) (built: May 26 2020 12:24:22) ( NTS )
 
 run:
-    $ cd week03/DateTimeProcessing
+ex1:
+    $ cd DateTimeProcessing
+    $ php -S localhost:8000
+ex2:
+    $ cd RadianExercise
     $ php -S localhost:8000
