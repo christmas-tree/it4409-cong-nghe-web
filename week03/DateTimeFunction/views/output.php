@@ -37,15 +37,22 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="name1">Name<span>*</span></label>
-                                                        <input class="form-control" type="text" id="name1" name="name1" value="<?php echo $name1 ?>" placeholder="name" required></input>
+                                                        <input class="form-control" type="text" id="name1" name="name1" placeholder="name" <?php echo isset($name1) ? "value=\"$name1\"" : ''; ?> required></input>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="birthday1">Birthday<span>*</span></label>
-                                                        <input class="form-control" type="date" id="birthday1" name="birthday1" value="<?php echo $birthday1 ?>" placeholder="birthday" required></input>
+                                                        <div class="row">
+                                                            <div class="col"><label>Birthday<span>*</span></label></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="day1" name="day1" placeholder="day" <?php echo isset($day1) ? "value=\"$day1\"" : ''; ?> required></input></div>
+                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="month1" name="month1" placeholder="month" <?php echo isset($month1) ? "value=\"$month1\"" : ''; ?> required></input></div>
+                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="year1" name="year1" placeholder="year" <?php echo isset($year1) ? "value=\"$year1\"" : ''; ?> required></input></div>
+                                                        </div>
+                                                        <?php echo isset($error_message1) ? "<p class=\"error\">$error_message1</p>" : ''; ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -56,15 +63,22 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="name2">Name<span>*</span></label>
-                                                        <input class="form-control" type="text" id="name2" name="name2" value="<?php echo $name2 ?>" placeholder="name" required></input>
+                                                        <input class="form-control" type="text" id="name2" name="name2" placeholder="name" <?php echo isset($name2) ? "value=\"$name2\"" : ''; ?> required></input>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="birthday2">Birthday<span>*</span></label>
-                                                        <input class="form-control" type="date" id="birthday2" name="birthday2" value="<?php echo $birthday2 ?>" placeholder="birthday" required></input>
+                                                        <div class="row">
+                                                            <div class="col"><label>Birthday<span>*</span></label></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="day2" name="day2" placeholder="day" <?php echo isset($day2) ? "value=\"$day2\"" : ''; ?> required></input></div>
+                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="month2" name="month2" placeholder="month" <?php echo isset($month2) ? "value=\"$month2\"" : ''; ?> required></input></div>
+                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="year2" name="year2" placeholder="year" <?php echo isset($year2) ? "value=\"$year2\"" : ''; ?> required></input></div>
+                                                        </div>
+                                                        <?php echo isset($error_message2) ? "<p class=\"error\">$error_message2</p>" : ''; ?>
                                                     </div>
                                                 </div>
                                             </div>
