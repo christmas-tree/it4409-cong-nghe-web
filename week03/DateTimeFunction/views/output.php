@@ -48,9 +48,38 @@
                                                             <div class="col"><label>Birthday<span>*</span></label></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="day1" name="day1" placeholder="day" <?php echo isset($day1) ? "value=\"$day1\"" : ''; ?> required></input></div>
-                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="month1" name="month1" placeholder="month" <?php echo isset($month1) ? "value=\"$month1\"" : ''; ?> required></input></div>
-                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="year1" name="year1" placeholder="year" <?php echo isset($year1) ? "value=\"$year1\"" : ''; ?> required></input></div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <input class="form-control" type="number" id="day1" list="day1s" name="day1" placeholder="day" <?php echo isset($day1) ? "value=\"$day1\"" : ''; ?> required></input>
+                                                                <datalist id=day1s>
+                                                                    <?php
+                                                                    for ($i = 1; $i <= 31; $i++) {
+                                                                        echo "<option value=\"$i\"></option>\n";
+                                                                    }
+                                                                    ?>
+                                                                </datalist>
+                                                            </div>
+
+                                                            <div class="col-12 col-sm-4">
+                                                                <input class="form-control" type="number" id="month1" list="month1s" name="month1" placeholder="month" <?php echo isset($month1) ? "value=\"$month1\"" : ''; ?> required></input>
+                                                                <datalist id=month1s>
+                                                                    <?php
+                                                                    for ($i = 1; $i <= 12; $i++) {
+                                                                        echo "<option value=\"$i\"></option>\n";
+                                                                    }
+                                                                    ?>
+                                                                </datalist>
+                                                            </div>
+
+                                                            <div class="col-12 col-sm-4">
+                                                                <input class="form-control" type="number" id="year1" list="year1s" name="year1" placeholder="year" <?php echo isset($year1) ? "value=\"$year1\"" : ''; ?> required></input>
+                                                                <datalist id=year1s>
+                                                                    <?php
+                                                                    for ($i = 1980; $i <= 2010; $i++) {
+                                                                        echo "<option value=\"$i\"></option>\n";
+                                                                    }
+                                                                    ?>
+                                                                </datalist>
+                                                            </div>
                                                         </div>
                                                         <?php echo isset($error_message1) ? "<p class=\"error\">$error_message1</p>" : ''; ?>
                                                     </div>
@@ -74,9 +103,38 @@
                                                             <div class="col"><label>Birthday<span>*</span></label></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="day2" name="day2" placeholder="day" <?php echo isset($day2) ? "value=\"$day2\"" : ''; ?> required></input></div>
-                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="month2" name="month2" placeholder="month" <?php echo isset($month2) ? "value=\"$month2\"" : ''; ?> required></input></div>
-                                                            <div class="col-12 col-sm-4"><input class="form-control" type="number" id="year2" name="year2" placeholder="year" <?php echo isset($year2) ? "value=\"$year2\"" : ''; ?> required></input></div>
+                                                            <div class="col-12 col-sm-4">
+                                                                <input class="form-control" type="number" id="day2" list="day2s" name="day2" placeholder="day" <?php echo isset($day2) ? "value=\"$day2\"" : ''; ?> required></input>
+                                                                <datalist id=day2s>
+                                                                    <?php
+                                                                    for ($i = 1; $i <= 31; $i++) {
+                                                                        echo "<option value=\"$i\"></option>\n";
+                                                                    }
+                                                                    ?>
+                                                                </datalist>
+                                                            </div>
+
+                                                            <div class="col-12 col-sm-4">
+                                                                <input class="form-control" type="number" id="month2" list="month2s" name="month2" placeholder="month" <?php echo isset($month2) ? "value=\"$month2\"" : ''; ?> required></input>
+                                                                <datalist id=month2s>
+                                                                    <?php
+                                                                    for ($i = 1; $i <= 12; $i++) {
+                                                                        echo "<option value=\"$i\"></option>\n";
+                                                                    }
+                                                                    ?>
+                                                                </datalist>
+                                                            </div>
+
+                                                            <div class="col-12 col-sm-4">
+                                                                <input class="form-control" type="number" id="year2" list="year2s" name="year2" placeholder="year" <?php echo isset($year2) ? "value=\"$year2\"" : ''; ?> required></input>
+                                                                <datalist id=year2s>
+                                                                    <?php
+                                                                    for ($i = 1980; $i <= 2010; $i++) {
+                                                                        echo "<option value=\"$i\"></option>\n";
+                                                                    }
+                                                                    ?>
+                                                                </datalist>
+                                                            </div>
                                                         </div>
                                                         <?php echo isset($error_message2) ? "<p class=\"error\">$error_message2</p>" : ''; ?>
                                                     </div>
