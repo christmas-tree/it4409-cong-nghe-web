@@ -19,10 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // validate
     $error_message1 = null;
     $error_message2 = null;
-    if (!isValidDate($day1, $month1, $year1))
-        $error_message1 = 'This day does not exist!';
-    if (!isValidDate($day2, $month2, $year2))
-        $error_message2 = 'This day does not exist!';
+    if (!isBirthday($day1, $month1, $year1))
+        $error_message1 = 'This is not a birthday!';
+    if (!isBirthday($day2, $month2, $year2))
+        $error_message2 = 'This is not a birthday!';
     if ($error_message1 || $error_message2) {
         require_once('views/input.php');
         exit();
