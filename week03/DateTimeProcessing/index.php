@@ -7,14 +7,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hour = $_POST['hour'];
     $minute = $_POST['minute'];
     $second = $_POST['second'];
-    $date = $_POST['date'];
+    $year = $_POST['year'];
+    $month = $_POST['month'];
+    $day = $_POST['day'];
 
-    // date to year month day
-    $dateArray = explode('-', $date);
-    $year = $dateArray[0];
-    $month = $dateArray[1];
-    $day = $dateArray[2];
-
+    // validate date
+    require_once('ValidateDate.php');
+    if (!isValidDate($day, $month, $year)) {
+        $error_message = 'This is not a date';
+        require_once('views/input.php');
+        exit();
+    }
+    
     // in 12-hours
     $hour12 = $hour % 12;
     $AMorPM = $hour > 12 ? "PM" : "AM";

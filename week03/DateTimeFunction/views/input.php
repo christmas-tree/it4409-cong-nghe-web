@@ -145,6 +145,9 @@
                                             <div class="col d-flex justify-content-center">
                                                 <button class="btn btn-primary" type="submit">Submit</button>
                                             </div>
+                                            <div class="col d-flex justify-content-center">
+                                                <a class="btn btn-success" href="index.php">Reset</a>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>

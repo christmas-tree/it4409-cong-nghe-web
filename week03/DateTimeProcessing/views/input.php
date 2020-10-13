@@ -35,7 +35,7 @@
                                                     <div class="col">
                                                         <div class="form-group">
                                                             <label for="name">Your Name<span>*</span></label>
-                                                            <input class="form-control" type="text" id="name" name="name" placeholder="Your name" required>
+                                                            <input class="form-control" type="text" id="name" name="name" <?php echo isset($name) ? "value=\"$name\"" : ''; ?> placeholder="Your name" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -49,7 +49,7 @@
                                                             <label>Select time<span>*</span></label>
                                                             <div class="row">
                                                                 <div class="col">
-                                                                    <input class="form-control" type="text" name="hour" list="hours" placeholder="hour" required>
+                                                                    <input class="form-control" type="text" name="hour" list="hours" <?php echo isset($hour) ? "value=\"$hour\"" : ''; ?> placeholder="hour" required>
                                                                     <datalist id=hours>
                                                                         <?php
                                                                         for ($i = 0; $i < 24; $i++) {
@@ -59,7 +59,7 @@
                                                                     </datalist>
                                                                 </div>
                                                                 <div class="col">
-                                                                    <input class="form-control" type="text" name="minute" list="minutes" placeholder="minute" required>
+                                                                    <input class="form-control" type="text" name="minute" list="minutes" <?php echo isset($minute) ? "value=\"$minute\"" : ''; ?> placeholder="minute" required>
                                                                     <datalist id=minutes>
                                                                         <?php
                                                                         for ($i = 0; $i < 60; $i++) {
@@ -69,7 +69,7 @@
                                                                     </datalist>
                                                                 </div>
                                                                 <div class="col">
-                                                                    <input class="form-control" type="text" name="second" list="seconds" placeholder="second" required>
+                                                                    <input class="form-control" type="text" name="second" list="seconds" <?php echo isset($second) ? "value=\"$second\"" : ''; ?> placeholder="second" required>
                                                                     <datalist id=seconds>
                                                                         <?php
                                                                         for ($i = 0; $i < 60; $i++) {
@@ -87,14 +87,55 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label for="date">Select date<span>*</span></label>
-                                                    <input class="form-control" type="date" name="date" required>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label>Select date<span>*</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-4">
+                                                            <input class="form-control" type="number" id="day" list="days" name="day" placeholder="day" <?php echo isset($day) ? "value=\"$day\"" : ''; ?> required></input>
+                                                            <datalist id=days>
+                                                                <?php
+                                                                for ($i = 1; $i <= 31; $i++) {
+                                                                    echo "<option value=\"$i\"></option>\n";
+                                                                }
+                                                                ?>
+                                                            </datalist>
+                                                        </div>
+
+                                                        <div class="col-12 col-sm-4">
+                                                            <input class="form-control" type="number" id="month" list="months" name="month" placeholder="month" <?php echo isset($month) ? "value=\"$month\"" : ''; ?> required></input>
+                                                            <datalist id=months>
+                                                                <?php
+                                                                for ($i = 1; $i <= 12; $i++) {
+                                                                    echo "<option value=\"$i\"></option>\n";
+                                                                }
+                                                                ?>
+                                                            </datalist>
+                                                        </div>
+
+                                                        <div class="col-12 col-sm-4">
+                                                            <input class="form-control" type="number" id="year" list="years" name="year" placeholder="year" <?php echo isset($year) ? "value=\"$year\"" : ''; ?> required></input>
+                                                            <datalist id=years>
+                                                                <?php
+                                                                for ($i = 1980; $i <= 2010; $i++) {
+                                                                    echo "<option value=\"$i\"></option>\n";
+                                                                }
+                                                                ?>
+                                                            </datalist>
+                                                        </div>
+                                                    </div>
+                                                    <?php echo isset($error_message) ? "<p class=\"error\">$error_message</p>" : ''; ?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col d-flex justify-content-center">
                                                 <button class="btn btn-primary" type="submit">Submit</button>
+                                            </div>
+                                            <div class="col d-flex justify-content-center">
+                                                <a class="btn btn-success" href="index.php">Reset</a>
                                             </div>
                                         </div>
                                     </form>
