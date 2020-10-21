@@ -11,4 +11,5 @@ PHP 7.4.3 (cli) (built: May 26 2020 12:24:22) ( NTS )
 ### run:  
 ex 4.2:  
     $ cd ex42  
+    $ mkdir storage  
     $ php -S localhost:8000  
