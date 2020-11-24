@@ -60,12 +60,16 @@ function callHook() {
 
     $controller = ucwords($controller);
     $controller .= 'Controller';
-    $dispatch = new $controller;
+    if (class_exists($controller)) {
+        $dispatch = new $controller;
 
-    if ((int) method_exists($controller, $action)) {
-        call_user_func_array(array($dispatch, $action), $queryString ?? []);
+        if ((int) method_exists($controller, $action)) {
+            call_user_func_array(array($dispatch, $action), $queryString ?? []);
+        } else {
+            /** Error generation code here */
+        }
     } else {
-        /** Error generation code here */
+        echo '404 Not found';
     }
 }
 
